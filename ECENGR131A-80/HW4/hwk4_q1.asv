@@ -1,0 +1,13 @@
+close all; clear all; clc;
+beta = [.5,1,2]; lambda = 1;
+x = linspace(0,10,1000)
+figure
+hold on
+for b = beta
+    plot(x,1-exp(-(x./lambda).^b),'linewidth',3)
+end
+legend(["\lambda=1 \beta=.5","\lambda=1 \beta=1","\lambda=1 \beta=2"])
+xlabel("x",'fontsize',20)
+ylabel("1-e^{-(x/\lambda)}^\beta",'fontsize',20)
+title("Weibull CDF",'fontsize',20)
+%%
