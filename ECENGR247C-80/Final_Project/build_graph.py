@@ -521,7 +521,7 @@ if doc_edge_flag:
     subset_of_all_documents = adj_normalized[idx_all_except_vocab]
     
      
-    new_connection_size = int(0.1*(train_size+test_size))
+    new_connection_size = int(0.01*(train_size+test_size))
     for i in idx_all_except_vocab:
         doc_current = adj_normalized[i:i+1]
         cosine_similarities = linear_kernel(adj_normalized[i:i+1], subset_of_all_documents).flatten()
