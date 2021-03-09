@@ -16,8 +16,15 @@ Python 3.8
 
 3. Run `python train_GCN.py [--corpus=20ng] [--num_epochs=100] [--hidden=50] [--alpha=0.05] [--verbose] [--dropout] [--print_every]`
 
-3. Run `python train_BERT.py [--corpus=20ng] [--alpha=1e-5] [--batch_size=64] [--print_every=5] [--pretrained] [--verbose] [--num_epochs]
+3. Run `python train_BERT.py [--corpus=20ng] [--alpha=1e-5] [--batch_size=64] [--print_every=5] [--pretrained] [--verbose] [--num_epochs]`
 
 4. Change `20ng` in above 3 command lines to `R8`, `R52`, `ohsumed` and `mr` when producing results for other datasets.
 
+## Reproducing Metric Calculations
+
+1. Run `python random_tasks.py --ttest --model_comparison=BERT`
+
+## Reproducing t-SNE
+
+1. Run `python random_tasks.py --t_sne`
 
